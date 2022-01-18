@@ -475,13 +475,13 @@
          (angle-diff-ok (<= (abs (- ship-angle land-angle)) landing-max-diff)))
         (cond 
           ((not angle-ok) 
-           (result-screen w "Корабль разбился! Слишком большой угол наклона!" "red"))
+           (result-screen w "Корабль разбился! Слишком большой угол наклона!\nThe spaceship crashed. Too much tilt angle!" "red"))
           ((not speed-ok)
-           (result-screen w "Корабль разбился! Слишком большая скорость!" "red"))
+           (result-screen w "Корабль разбился! Слишком большая скорость!\nThe spaceship crashed. Too much speed!" "red"))
           ((not angle-diff-ok)
-           (result-screen w "Корабль разбился! Слишком большое отклонение от поверхности!" "red"))
+           (result-screen w "Корабль разбился! Слишком большое отклонение от поверхности!\nThe spaceship crashed! Too much deviation from the surface!" "red"))
           (else
-           (result-screen w "Успешная посадка!" "green")))))
+           (result-screen w "Успешная посадка!\nSuccessful landing!" "green")))))
 
 (define (start)
   (big-bang world0
